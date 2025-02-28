@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi novia?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #ffe6e6;
+        }
+        h1 {
+            color: #ff3366;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 80px;
+            padding:60px 70px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #yes {
+            background-color: #66cc66;
+            color: white;
+        }
+        #no {
+            background-color: #ff6666;
+            color: white;
+            position: absolute; 
+			font-size: 20px;
+            padding:10px 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>¿Quieres ser mi novia?</h1>
+    <div class="buttons">
+        <button id="yes">Sí</button>
+        <button id="no">No</button>
+    </div>
+    <script>
+        document.getElementById('yes').addEventListener('click', function() {
+            alert('¡Sabía que dirías que sí! ❤️');
+        });
+
+        const noButton = document.getElementById('no');
+        noButton.addEventListener('mouseover', function() {
+            const x = Math.random() * (window.innerWidth - noButton.offsetWidth);
+            const y = Math.random() * (window.innerHeight - noButton.offsetHeight);
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        });
+    </script>
+</body>
+</html>
